@@ -11,10 +11,18 @@
 
 
 ## criterios de diseño del sistema
-
 inspiración para construir, desde donde partieron
-
 contexto desde Chile, desde nuestra disponibilidad material
+
+
+Fuerte arraigo con lo modular, desde un principio creamos sistemas modulares hasta llegar a estas distintas placas cada una con diferentes chips y componentes pero oara llegar al mismo fin, un sintetizador modular capaz de interconectarse con nuevas partes de nuestras placas realizadas 
+
+El diy vs eurorack, precios, diferencias 
+Ante la barrera del eurorack salen las placas mas diy (como las de este taller) ya que los componentes son baratos de conseguir, aqui el contexto chileno brillante por la necesidad y creatividad, 
+La existencia de iniciativas locales como talleres y la misma comunidad 
+
+Jose vicente asuar
+
 
 nombre de sistema/instrumento construido por medio de módulos
 
@@ -102,6 +110,9 @@ lista de materiales con costos. Incluir tiempo de soldadura
 | Capacitor 1uF | 1 | ?? | $300 | Victronics | |
 | Jack DC | 2 | J2, J3 | $150 | Electrónica Real | |
 | Jack de audio | 1 | J1 | $150-$300 | Victronics | |
+
+
+Soldado 6 Horas
 
  Según yo esto no va 
  
