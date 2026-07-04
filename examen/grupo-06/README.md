@@ -19,6 +19,12 @@
 - **Placa 01 (Barry Benson)**: funciona perfecto.
 - **Placa 02 (Ludub)**: funciona a medias, solo en cierta posición. Se sospechó de la soldadura, se reforzó y siguió igual o peor. Ahora se sospecha de los cables; se cambiarán mañana para ver si se soluciona.
 - **Placa 03 (Chirihue)**: no funciona. Prende la luz pero no oscila ni suena. Se intentó resolver sin éxito y se decidió no seguir insistiendo con esta placa en su formato actual. Plan: armar el circuito en protoboard para probar que funcione, y si es así, soldarlo en una placa verde para presentar.
+  
+## Explicación de flujo de señal de audio
+- **Energía**: entra por la placa 03 (oscilador "Chirihue") y desde ahí se comparte, mediante cables jack, hacia las demás placas (Barry Benson y Ludub). Se enciende con un switch.
+- **Salida de audio**: las 3 placas (Barry Benson, Ludub y Chirihue) envían su salida a un mixer.
+- **Mixer**: recibe las 3 señales de audio y entrega una salida combinada al amplificador.
+- **Amplificador**: recibe la señal del mixer y suena.
 
 ## Ayudas eléctricas que necesitamos domingo
 - Ayuda para confirmar si el problema de la placa 02 (Ludub) son efectivamente los cables (dado que ya se descartó la soldadura), y cómo solucionarlo si es otra causa.
