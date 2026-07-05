@@ -120,8 +120,7 @@ Gracias a ti, y tu buena bondad, la voz de los más pequeños se hace grande. Es
 
 Y así funcionan diversas naturalezas…, se entretejen y se convierten en una sola.
 
-
-## REPORTE DE PLACAS
+## REPORTE DE ESTADO
 
 placas usadas:
 
