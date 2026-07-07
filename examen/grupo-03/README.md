@@ -33,6 +33,9 @@ Comando Estelar es el módulo principal de generación sonora del sintetizador. 
 Su funcionamiento se basa en la combinación de dos circuitos integrados: el CD4046, utilizado como oscilador controlado por voltaje (VCO), y el CD40106, compuesto por inversores Schmitt Trigger que permiten acondicionar y estabilizar la señal generada por el oscilador.
 La integración de ambos circuitos entrega un comportamiento estable y permite modificar la frecuencia mediante controles manuales, generando distintas alturas tonales y variaciones sonoras que posteriormente son enviadas al módulo de mezcla.
 
+![imagenes](./imagenes/pcbcomando.png)
+![imagenes](./imagenes/esq.comando.png)
+
 ---
 
 **¿Cómo funciona?:**
@@ -92,6 +95,9 @@ Dentro de Vitrina Sónica, Comando Estelar actúa como uno de los módulos encar
 
 Resonancia corresponde al segundo módulo generador del sintetizador. Aunque comparte la misma arquitectura base del primer oscilador, incorpora un CD4017, contador decimal que introduce un comportamiento secuencial dentro del circuito.
 Este módulo no solo genera una señal sonora, sino que además agrega variaciones rítmicas y cambios periódicos, permitiendo enriquecer la composición del sintetizador mediante la interacción entre el oscilador y la lógica secuencial.
+
+![imagenes](./imagenes/pbcresonancia.png)
+![imagenes](./imagenes/esq.resonancia.png)
 
 ---
 
