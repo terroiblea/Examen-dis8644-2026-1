@@ -293,7 +293,7 @@ Descubrimos que nuestra partitura calzaba con el principio del Sitio específico
  
 *(ver. poética)*
  
->**Ve a República 180 y ubica el piezo en la mesa de ping pong**
+>**Ve a República 180 y ubica el piezo en las paletas de ping pong**
 > 
 >**Invita a alguien a jugar**
 > 
