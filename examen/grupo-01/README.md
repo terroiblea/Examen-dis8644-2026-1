@@ -20,7 +20,7 @@ Elegimos ocupar acrilico transparente para romper con la idea de la caja negra, 
 
 ### ¿De dónde partimos? 
 
-No teníamos conocimiento previo antes de entrar al taller, fue nuestra primera vez trabajando con y soldando componentes electrónicos a placas. Aparte de las clases que dieron los profesores buscamos inspiración en páginas web como foros y canales de YouTube que mostraban cómo hacer partes de sintetizadores (ej. filtros, amplificadores, reguladores etc..). 
+No teníamos conocimiento previo antes de entrar al taller, fue nuestra primera vez trabajando con componentes electrónicos y soldando en placas. Aparte de las clases que dieron los profesores buscamos inspiración en páginas web como foros y canales de YouTube que mostraban cómo hacer partes de sintetizadores (ej. filtros, amplificadores, reguladores etc..). 
  
 Todo este proceso ha sido prueba y error, si no funciona, se cambia y se vuelve a intentar. Gran parte de la ayuda fue entre compañeros, nos apoyamos para arreglar problemas comunes, compartimos datos de lugares de compra y páginas web para buscar circuitos interesantes. 
  
@@ -68,7 +68,7 @@ Victronics es una tienda online, por eso pueden ofrecer precios más bajos, adem
  
 ### BOM PCB MAINCRA
  
-Este módulo te permite interactuar con el sintetizador mediante vibraciones en el piezo, mediante golpes en el mismo. Estas vibraciones serán captadas por el piezo, lo cual lo tomará como señal para avanzar en el secuenciador. 
+Este módulo te permite interactuar con el sintetizador mediante vibraciones en el piezo, mediante golpes en el mismo. Estas vibraciones serán captadas por el piezo, lo cual lo tomará como señal para alterar el sonido final. 
  
 La idea detrás de esta propuesta nace de la posibilidad de sentir y ver las vibraciones. Aquello que parece caótico o insignificante puede contener señales que, al prestar suficiente atención, adquieren un significado propio. Siguiendo esa lógica, el piezo actúa como un medio para captar esas vibraciones y convertirlas en acciones dentro del sintetizador, permitiendo que elementos normalmente invisibles se vuelvan parte de la interacción. 
  
@@ -167,7 +167,7 @@ Nuestro sintetizador está formado de 3 módulos:
  
 ## Maincra (Piezo/Entrada) 
  
-*Un micrófono de contacto detecta vibraciones, manda señales a un amplificador e inversor de señales. Estos convierten la corriente la cual entra a un reloj interno que lo cambia a pasos para que un secuenciador pueda funcionar.*
+*Un micrófono de contacto detecta vibraciones, manda señales a un amplificador e inversor de señales. Estos convierten la corriente la cual entra a un reloj interno altera la oscilación final que sale por el parlante.*
  
 ## Comando estelar (Oscilador) 
  
