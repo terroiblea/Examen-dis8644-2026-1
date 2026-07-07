@@ -16,27 +16,23 @@
 
 La biofonía es el conjunto de sonidos emitidos por los seres vivos en su hábitat natural. Estos sonidos son producidos tanto por grupos de animales como por individuos aislados, y en conjunto crean una sinfonía característica de cada lugar. Es un término clave en la ecología acústica (Paisajes Sonoros, s.f.).
 
-Biofonía, el sintetizador, es una reinterpretación artificial de ese concepto, dos módulos que evocan procesos biológicos fundamentales. Uno late. El otro zumba. Ninguno está vivo, pero juntos construyen un paisaje sonoro que recuerda a un organismo. Suena a naturaleza. No lo es.
+Biofonía, el sintetizador, es una reinterpretación artificial de ese concepto, dos módulos que evocan procesos biológicos fundamentales. Uno late. El otro zumba. Ninguno está vivo, pero juntos construyen un paisaje sonoro que recuerda a un organismo. Suena a naturaleza, pero no lo es.
 
 ## Criterios de diseño del sistema
 
 Biofonía nació como una coincidencia. Durante el desarrollo de los circuitos, nos dimos cuenta de que las dos placas que habíamos construido sonaban, sin haberlo planeado, como procesos vivos, una parecía el latido de un corazón y la otra el zumbido insistente de un insecto. Dejamos de ver dos circuitos independientes y empezamos a entenderlos como partes de un mismo organismo.
 
-A partir de esa coincidencia surgió la pregunta que dio forma al proyecto: si un circuito puede latir y otro puede zumbar, ¿qué clase de ser habita entre ambos? La respuesta fue imaginar un ecosistema propio. No uno natural, sino uno construido con cobre, silicio y componentes electrónicos. Un jardín artificial donde cada módulo representa una escala distinta de la vida: Lub-dub representa la vida interna, el ritmo que mantiene vivo al organismo. Berry Benson representa la vida externa, el movimiento, la actividad, el entorno. Uno no existe sin el otro.
+A partir de esa coincidencia surgió la pregunta que dio forma al proyecto: si un circuito puede latir y otro puede zumbar, ¿qué clase de ser habita entre ambos? La respuesta fue imaginar un ecosistema propio. Un jardín artificial donde cada módulo representa una escala distinta de la vida: Lub-dub representa la vida interna, el ritmo que mantiene vivo al organismo. Berry Benson representa la vida externa, el movimiento, la actividad, el entorno. Uno no existe sin el otro.
 
 El concepto de biofonía apareció después, al intentar nombrar ese paisaje. En ecología acústica, la biofonía corresponde al conjunto de sonidos producidos por los seres vivos de un ecosistema. Nuestro instrumento no busca reproducir un ecosistema completo, sino capturar dos de sus gestos más reconocibles, el pulso interno del cuerpo y el movimiento constante del insecto. El interés está precisamente en esa distancia entre lo vivo y lo electrónico, donde un circuito puede recordar a un organismo sin dejar de evidenciar que es una máquina.
 
-Esta lógica también definió las decisiones materiales y técnicas del proyecto. Biofonía fue posible gracias al acceso abierto a documentación e información en internet. En lugar de diseñar los circuitos desde cero, investigamos referentes existentes, analizamos sintetizadores DIY y placas ya desarrolladas por la comunidad, comprendimos sus principios de funcionamiento y los adaptamos al proyecto. Esa disponibilidad de conocimiento permitió centrar el proceso en reinterpretar y combinar módulos ya probados para construir un sistema con identidad propia. La elección de componentes respondió además a la disponibilidad del contexto chileno, privilegiando piezas de fácil acceso en tiendas nacionales de electrónica, haciendo que el instrumento no solo sea reproducible, sino también reparable y replicable.
+Esta lógica también definió las decisiones materiales y técnicas del proyecto. Biofonía fue posible gracias al acceso abierto a documentación e información en internet. En lugar de diseñar los circuitos desde cero, investigamos referentes existentes, analizamos sintetizadores DIY (hazlo tu mismo) y placas ya desarrolladas por la comunidad, comprendimos sus principios de funcionamiento y los adaptamos al proyecto. Esa disponibilidad de conocimiento permitió centrar el proceso en reinterpretar y combinar módulos ya probados para construir un sistema con identidad propia. La elección de componentes respondió además a la disponibilidad del contexto chileno, privilegiando piezas de fácil acceso en tiendas nacionales de electrónica, haciendo que el instrumento no solo sea reproducible, sino también reparable y replicable.
 
 ### Usuario
 
-Biofonía es para quien escucha el mundo con atención. Para quien alguna vez se quedó parado escuchando el sonido de un transformador eléctrico en la calle y pensó que era interesante. Para quien no necesita que un sonido sea bonito para que le importe.
+Biofonía es para quien escucha el mundo con atención. Para quien alguna vez se quedó despierto hasta las 3am porque había un mosquito volando en su oído o para quien no necesita que un sonido sea bonito para que le importe.
 
-No tiene un perfil fijo. Puede venir de la música, del diseño, de la biología, o de ningún lugar en particular. Lo que tiene en común con cualquier otro usuario de Biofonía es que le interesa hacer cosas, entender cómo funcionan, y que no le asusta que el resultado sea raro.
-
-Le atrae la idea de que un circuito pueda imitar algo vivo. Le atrae más todavía que no lo logre del todo, y que en esa distancia entre la naturaleza y la máquina viva algo interesante.
-
-Biofonía es para esa persona; la que escucha la diferencia entre un zumbido y otro, y quiere saber de dónde viene.
+No tiene un perfil fijo. Puede venir de la música, del diseño, de la biología, o de ningún lugar en particular. Le atrae la idea de que un circuito pueda imitar algo vivo. Le atrae más todavía que no lo logre del todo, y que en esa distancia entre la naturaleza y la máquina viva algo interesante.
 
 ## Partes de Bíofonia 
 
@@ -55,7 +51,7 @@ Barry Benson no es una abeja. Es peor que una abeja, es una abeja con complejos,
 
 Barry Benson recibe 12V por un jack de alimentación, que el circuito reduce internamente a 5V usando un regulador L7805. Su único output es una señal de audio por un jack estéreo.
 
-Cuando alguien usa Barry Benson, interactúa con cuatro potenciómetros. Cada uno controla la frecuencia de un oscilador independiente, en otras palabras, es básicamente qué tan rápido vibra cada "ala" de la abeja. El chip que hace posible todo esto es el 40106, que contiene seis inversores Schmitt-trigger, componentes que deciden cuándo una señal es alta o baja, produciendo oscilaciones estables. Las cuatro señales resultantes se mezclan a través de compuertas XOR del chip 4070. Una XOR produce señal sólo cuando sus entradas son distintas, así que al combinar frecuencias similares pero no idénticas, la salida fluctúa a una velocidad igual a la diferencia entre ambas. Ese fenómeno es lo que hace que el volumen suba y baje de forma orgánica y le da a Barry ese carácter de insecto vivo que ningún presente de sintetizador ha logrado replicar con tanta dignidad.
+Cuando alguien usa Barry Benson, interactúa con cuatro potenciómetros. Cada uno controla la frecuencia de un oscilador independiente, en otras palabras, es básicamente qué tan rápido vibra cada "ala" de la abeja. El chip que hace posible todo esto es el CD40106BE, que contiene seis inversores Schmitt-trigger, componentes que deciden cuándo una señal es alta o baja, produciendo oscilaciones estables. Las cuatro señales resultantes se mezclan a través de compuertas XOR del chip CD4070. Una XOR produce señal sólo cuando sus entradas son distintas, así que al combinar frecuencias similares pero no idénticas, la salida fluctúa a una velocidad igual a la diferencia entre ambas. Ese fenómeno es lo que hace que el volumen suba y baje de forma orgánica y le da a Barry ese carácter de insecto vivo que ningún presente de sintetizador ha logrado replicar con tanta dignidad.
 
 ![barry benson](./imagenes/abeja.png)
 
@@ -75,7 +71,7 @@ Lub-dub hace exactamente lo que hace un corazón: bombea. Pero en vez de bombear
 
 Lub-dub recibe 12V por un jack de alimentación, regulados internamente a 5V con un L7805. Su output es una señal de audio por un jack estéreo. Tiene cuatro potenciómetros que en conjunto controlan el tempo y el carácter del golpe.
 
-El corazón del circuito es un oscilador construido con inversores Schmitt-trigger de los chips 40106 y 4069UBE. Un condensador se carga y descarga continuamente a través de resistencias variables: los potenciómetros cambian esas resistencias, lo que cambia qué tan rápido se carga el condensador y por lo tanto qué tan rápido late y cómo suena ese latido. La ventaja del Schmitt-trigger es que conmuta en voltajes distintos al subir y al bajar, lo que produce ese golpe brusco y limpio en vez de una transición suave. Antes de llegar al output, la señal pasa por una red de condensadores y resistencias que recorta el pulso y lo convierte en un impulso corto y acentuado. Ese recorte es lo que transforma la oscilación en un tac o un dumb dependiendo de cómo estén ajustados los potenciómetros.
+El corazón del circuito es un oscilador construido con inversores Schmitt-trigger de los chips CD40106BE y CD4069UBE. Un condensador se carga y descarga continuamente a través de resistencias variables: los potenciómetros cambian esas resistencias, lo que cambia qué tan rápido se carga el condensador y por lo tanto qué tan rápido late y cómo suena ese latido. La ventaja del Schmitt-trigger es que conmuta en voltajes distintos al subir y al bajar, lo que produce ese golpe brusco y limpio en vez de una transición suave. Antes de llegar al output, la señal pasa por una red de condensadores y resistencias que recorta el pulso y lo convierte en un impulso corto y acentuado. Ese recorte es lo que transforma la oscilación en un tac o un dumb dependiendo de cómo estén ajustados los potenciómetros.
 
 ![Lub dub](./imagenes/corazon.png)
 
@@ -95,7 +91,7 @@ El Mixer es el jardinero silencioso de Biofonía. Su trabajo consiste en decidir
 
 El Mixer recibe las señales de audio provenientes de cada una de las placas de Biofonía. Cada entrada pasa primero por un potenciómetro, que actúa como un control de volumen independiente, al girarlo se atenúa o aumenta el nivel de esa señal, llegando incluso a dejarla completamente en silencio.
 
-Una vez ajustados los niveles, las señales se combinan en un circuito mezclador pasivo de dos canales, obteniendo una única salida de audio. Esa salida es la que finalmente abandona Biofonía a través del jack de audio para ser amplificada o grabada.
+Una vez ajustados los niveles, las señales se combinan en un circuito mezclador de dos canales, obteniendo una única salida de audio. Esa salida es la que finalmente abandona Biofonía a través del jack de audio para ser amplificada.
 
 ![mixer](./imagenes/mixer.png)
 
@@ -146,13 +142,13 @@ Construir un **Biofonía** sin considerar la carcasa tiene un costo total de **$
 
 En teoría, el tiempo de ensamblaje y soldadura de todas las placas es de aproximadamente **2 horas entre dos personas**. Esto, por supuesto, asumiendo un universo paralelo donde todas las soldaduras quedan bien al primer intento, ningún componente viene defectuoso, ningún integrado se instala al revés y jamás se rompe una pista del PCB.
 
-En el universo que nos tocó habitar, el proceso completo de soldadura, diagnóstico, desoldado, reparación, pruebas y vuelta a empezar tomó cerca de **80 horas de trabajo**. Porque hacer electrónica consiste, aproximadamente, en un 10% de soldar y un 90% de preguntarse por qué dejó de funcionar algo que hace cinco minutos sí funcionaba. 
+En el universo que nos tocó habitar, el proceso completo de soldadura, diagnóstico, desoldado, reparación, pruebas y vuelta a empezar tomó cerca de **90 horas de trabajo**. Porque hacer electrónica consiste, aproximadamente, en un 10% de soldar y un 90% de preguntarse por qué dejó de funcionar algo que hace cinco minutos sí funcionaba. 
 
 ## Aprendizajes y errores
 
 ### El caso del Chirihue
 
-La idea original de Biofonía contemplaba tres organismos: una abeja, un corazón y un pájaro. La tercera placa correspondía a **Chirihue Mecanizado**, un sintetizador que imitaba el canto de un chirihue y que completaba el ecosistema que queríamos construir.
+La idea original de Biofonía contemplaba tres organismos: una abeja, un corazón y un pájaro. La tercera placa correspondía al **Chirihue Mecanizado**, un sintetizador que imitaba el canto de un chirihue y que completaba el ecosistema que queríamos construir.
 
 Desde el punto de vista conceptual, la inclusión tenía mucho sentido. Cada placa representaba un ser vivo distinto y, juntas, daban forma a un pequeño paisaje sonoro inspirado en la naturaleza.
 
@@ -178,11 +174,16 @@ Finalmente, se tomó la decisión de eliminar esta placa del proyecto y concentr
 - En varias ocasiones el problema resultó ser simplemente una batería descargada o un parlante con poca carga.
 - Los cables utilizados se cortaban con facilidad, obligando a repetir soldaduras prácticamente durante todo el proceso de ensamblaje.
 - Para comprobar el funcionamiento era necesario soldar completamente las placas, pero luego había que desmontar parte del cableado para integrarlas a la carcasa, aumentando el riesgo de generar nuevas fallas.
+- La mayoría de nuestros errores finales consistieron en una falla en la soldadura de muchos potenciómetros, aunque no lo parezca soldar bien un potenciómetro es difícil.
 
 ### Registro proceso
 
 ![soldadura](./imagenes/procreso-soldadura.png)
 ![proceso sintetizador](./imagenes/proceso.png)
+
+### Video proceso placa corazón
+
+[![Video proceso corazón](https://img.youtube.com/vi/nLGqmYwhpM4/maxresdefault.jpg)](https://youtube.com/shorts/nLGqmYwhpM4)
 
 ## Carcasa
 
@@ -200,7 +201,7 @@ Sin embargo, como el diseño evolucionó durante el desarrollo del proyecto la p
 
 ![ideas carcasa](./imagenes/ideas-carcasa-2.png)
 
-Para que todo correspondiera con precisión a las medidas reales de los componentes, potenciómetros, jacks y switches, se decidió utilizar impresión 3D. Es el método que mejor permite iterar rápido, ajustar medidas y garantizar que cada pieza encaje donde tiene que encajar sin improvisaciones. *La naturaleza es imprecisa. La carcasa no puede serlo.*
+Para que todo correspondiera con precisión a las medidas reales de los componentes, potenciómetros, jacks y switches, se decidió utilizar impresión 3D. Es el método que mejor permite iterar rápido, ajustar medidas y garantizar que cada pieza encaje donde tiene que encajar.
 
 La impresión 3D también hizo posible una decisión conceptual importante. El corazón no debía estar expuesto. Como ocurre en un organismo vivo, Lub-dub permanece resguardado dentro del cuerpo del instrumento. Solo al levantar Biofonía puede verse a través de una base de acrílico transparente, revelando aquello que normalmente permanece oculto. En contraste, Barry Benson habita la superficie del jardín, donde puede verse e interactuar con el entorno. Ambos ocupan el lugar que les corresponde: uno protegido en el interior, el otro recorriendo el exterior.  
 
@@ -230,6 +231,10 @@ La fabricación de la carcasa fue un proceso tan iterativo como el desarrollo el
 
 ![resultado carcasa](./imagenes/carcasa.png)
 
+### Video proceso sonido placa + parte de la carcasa 
+
+[![Video proceso sonido placa](https://img.youtube.com/vi/qVxnHnhr8nA/maxresdefault.jpg)](https://youtube.com/shorts/qVxnHnhr8nA)
+
 ---
 
 ## Partitura 1
@@ -240,53 +245,47 @@ La obra dura 24 horas y está pensada para ser tocada una vez al día, todos los
 
 ### Cómo leer la partitura:
 
-Cada potenciómetro tiene una flor con 6 pétalos. El pétalo marcado con una línea es el pétalo 1 y corresponde al mínimo. Desde ahí se cuentan en sentido horario. El pétalo 6 es el máximo. Cada módulo tiene tres flores:
+Cada potenciómetro tiene una flor con 6 pétalos. El pétalo marcado con una línea es el pétalo 1 y corresponde al mínimo. Desde ahí se gira la perilla.. El pétalo 6 es el máximo. Cada módulo tiene tres flores:
 
 - **Flor alta** — controla la velocidad.
 - **Flor media** — controla el carácter del sonido.
 - **Flor pequeña** — controla el volumen.
 
-#### 08:00 – 12:00
+Barry Benson: Flores amarillas
+Lub-dub: Flores Rojas
 
-Barry despierta. Sale despacio, todavía fría, explorando. Lub-dub siente el movimiento y empieza a activarse. El jardín abre los ojos.
+#### 08:00 – 12:00
 
 | Módulo |  Velocidad |  Carácter | Volumen |
 |--------|-------------|------------|-----------|
-| Barry Benson | pétalo 4 | pétalo 3 | pétalo 2 |
-| Lub-dub | pétalo 4 | pétalo 3 | pétalo 2 |
+| Barry Benson | pétalo 3 | pétalo 3 | pétalo 3 |
+| Lub-dub | pétalo 5 | pétalo 4 | pétalo 3 |
 
 #### 12:01 – 16:00
 
-Barry está en su punto máximo. Recorre el jardín con urgencia, el zumbido llena el espacio. Lub-dub acompaña ese ritmo, late con la energía del mediodía.
-
 | Módulo |  Velocidad | Carácter | Volumen |
 |--------|-------------|------------|-----------|
-| Barry Benson | pétalo 5 | pétalo 5 | pétalo 5 |
-| Lub-dub | pétalo 5 | pétalo 4 | pétalo 4 |
+| Barry Benson | pétalo 4 | pétalo 5 | pétalo 5 |
+| Lub-dub | pétalo 5 | pétalo 5 | pétalo 6 |
 
 #### 16:01 – 20:00
-
-Barry empieza a volver. El zumbido se hace más lento, más grave, más pesado. Lub-dub lo sigue: el cuerpo sabe que el día termina antes de que anochezca.
 
 | Módulo | Velocidad |  Carácter | Volumen |
 |--------|-------------|------------|-----------|
 | Barry Benson | pétalo 2 | pétalo 4 | pétalo 4 |
-|  Lub-dub | pétalo 2 | pétalo 3 | pétalo 3 |
+|  Lub-dub | pétalo 4 | pétalo 3 | pétalo 6 |
 
 #### 20:01 – 07:59
-
-Barry no existe. Las abejas no vuelan de noche. Lub-dub sigue, porque los corazones no saben lo que es el descanso. Late solo, en silencio, sosteniendo algo que nadie más escucha.
 
 | Módulo | Velocidad | Carácter | Volumen |
 |--------|-------------|------------|-----------|
 |  Barry Benson | pétalo 1 | pétalo 1 | pétalo 1 |
-| Lub-dub | pétalo 1 | pétalo 2 | pétalo 2 |
+| Lub-dub | pétalo 3 | pétalo 2 | pétalo 6 |
 
 #### Notas de interpretación
 
 - Las transiciones entre actos no son abruptas. Las flores se giran despacio, como quien no quiere que nadie se dé cuenta de que algo cambió.
 - Los pétalos son un punto de partida, no una ley. Si al girar una flor suena horrible, gírala hasta que suene bien y anótalo. La partitura es un ser vivo.
-- El silencio de 20:01 a 07:59 no es silencio total: Lub-dub sigue latiendo. Siempre sigue latiendo.
 
 ### Referentes partitura 1 
 
@@ -317,7 +316,7 @@ Antes de comenzar a dibujar la partitura, fue necesario definir un lenguaje visu
 
 Una vez definido este lenguaje gráfico, la partitura fue desarrollada digitalmente en **Procreate**. Para facilitar su lectura e interpretación, se estableció una estructura basada en dos ejes:
 
-- El eje vertical (lado izquierdo) representa el **volumen**, dividido en cinco niveles. La línea central corresponde al volumen medio, mientras que los extremos representan el mínimo (0) y el máximo (100).
+- El eje vertical (lado izquierdo) representa el **la perilla**, dividida en cinco niveles. La línea central corresponde al medio, mientras que los extremos representan el mínimo (0) y el máximo (100).
 - El eje horizontal representa el **tiempo**. La partitura se divide en cinco secciones iguales, donde cada división corresponde a un minuto de interpretación.
 
 ![partitura 2 desglose](./imagenes/partitura-2-2.jpeg)
